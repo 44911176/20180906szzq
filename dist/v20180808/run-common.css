@@ -1,0 +1,623 @@
+/**
+ * base style
+ */
+/**
+ * reset style
+ */
+/*内外边距通常让各个浏览器样式的表现位置不同*/
+body,
+div,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+/*
+  去除默认边框
+  图片与外围容器贴合
+  img缩放处理
+*/
+img {
+  border: 0;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+/*去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去*/
+ul,
+li {
+  list-style: none;
+}
+button,
+input,
+select,
+textarea {
+  /*表单元素不继承父级 font 的问题*/
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: middle;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  /*去chrome focus默认的高亮边框*/
+  outline: none;
+}
+/**
+ * html5  reset style
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+/*如同img标签*/
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  /*没有controls属性统一不显示，*/
+  display: none;
+  /*防止IOS5下多余的高度*/
+  height: 0;
+}
+/*
+ 重置a元素：
+    1. 去掉IE10中已激活链接的灰色背景
+    2. 处理chrome与其它浏览器在a:focus时的不同
+    3. 提升a:active,a:hover时元素的可读性
+    4. 去掉下划线
+ */
+a {
+  background: transparent;
+  /*1*/
+}
+a:focus {
+  outline: thin dotted;
+  /*2*/
+}
+a:active,
+a:hover {
+  outline: 0;
+  /*3*/
+}
+a:link,
+a:visited,
+ins {
+  text-decoration: none;
+  /* 4*/
+}
+/*
+    统一盒模型
+*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: none;
+  /*屏蔽浏览器默认字体大小*/
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  /*去除a标签点击阴影*/
+}
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  height: 100%;
+}
+body {
+  font-family: '微软雅黑', Helvetica, Arial, '宋体', sans-serif;
+  color: #000;
+  -webkit-backface-visibility: hidden;
+  background: #ffffff;
+  height: 100%;
+  margin: 0 auto;
+}
+.clear:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
+a {
+  color: inherit;
+}
+
+.overflow1 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.gif-index {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  text-align: center;
+  transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.8s;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.8s;
+}
+.main-wrapper {
+  background: url(i/bg.jpg?v20180808) repeat-y top center;
+  min-height: 1200px;
+  overflow: hidden;
+}
+.main-wrapper .share {
+  text-align: right;
+  font-size: 13px;
+  line-height: 30px;
+}
+.main-wrapper .share div {
+  display: inline;
+}
+.main-wrapper .share .bdsharebuttonbox {
+  float: right;
+  padding-left: 10px;
+}
+.main-wrapper .menu {
+  width: 1200px;
+  margin: 0 auto;
+}
+.main-wrapper .menu ul {
+  margin-top: 125px;
+  margin-left: 290px;
+}
+.main-wrapper .menu ul li {
+  float: left;
+  height: 90px;
+  width: 200px;
+  cursor: pointer;
+}
+.main-wrapper .menu ul li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.main-wrapper .menu ul li:nth-child(1) {
+  background: url(i/m1-1.png?v20180808) no-repeat center;
+  margin-right: 110px;
+}
+.main-wrapper .menu ul li:nth-child(1):hover,
+.main-wrapper .menu ul li:nth-child(1).current {
+  background: url(i/m1-2.png?v20180808) no-repeat center;
+}
+.main-wrapper .menu ul li:nth-child(2) {
+  background: url(i/m2-1.png?v20180808) no-repeat center;
+  margin-right: 110px;
+}
+.main-wrapper .menu ul li:nth-child(2):hover,
+.main-wrapper .menu ul li:nth-child(2).current {
+  background: url(i/m2-2.png?v20180808) no-repeat center;
+}
+.main-wrapper .menu ul li:nth-child(3) {
+  background: url(i/m3-1.png?v20180808) no-repeat center;
+}
+.main-wrapper .menu ul li:nth-child(3):hover,
+.main-wrapper .menu ul li:nth-child(3).current {
+  background: url(i/m3-2.png?v20180808) no-repeat center;
+}
+.main-wrapper .content {
+  height: 800px;
+  width: 1200px;
+  margin: 80px auto;
+  background: rgba(255, 255, 255, 0.8);
+}
+.main-wrapper .content .main-video ul li {
+  overflow: hidden;
+}
+.main-wrapper .content .main-video ul li video {
+  width: 1000px;
+  height: 563px;
+  margin: 40px auto 20px;
+  display: block;
+}
+.main-wrapper .content .main-video ul li div {
+  border-top: 1px solid #7a7a7a;
+  width: 1000px;
+  margin: 0 auto;
+}
+.main-wrapper .content .main-video ul li div .title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 3;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.main-wrapper .content .main-video ul li div .sum {
+  font-size: 15px;
+  color: #7a7a7a;
+  line-height: 24px;
+  text-indent: 30px;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.main-wrapper .content .main-story {
+  padding: 60px 80px;
+}
+.main-wrapper .content .main-story .item {
+  display: inline-block;
+  position: relative;
+}
+.main-wrapper .content .main-story .item img {
+  width: 100%;
+  height: 100%;
+}
+.main-wrapper .content .main-story .item:hover .title {
+  height: 35px;
+}
+.main-wrapper .content .main-story .item .title {
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: absolute;
+  color: #ffffff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 35px;
+  padding: 0 15px;
+  bottom: 0;
+  left: 0;
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.5s;
+}
+.main-wrapper .content .main-story .item:nth-child(1) {
+  width: 600px;
+  height: 300px;
+  margin-right: 20px;
+}
+.main-wrapper .content .main-story .item:nth-child(2) {
+  width: 410px;
+  height: 300px;
+}
+.main-wrapper .content .main-story .item:nth-child(3),
+.main-wrapper .content .main-story .item:nth-child(5) {
+  width: 330px;
+  height: 300px;
+  margin-top: 20px;
+}
+.main-wrapper .content .main-story .item:nth-child(4) {
+  width: 330px;
+  height: 300px;
+  margin: 20px;
+}
+.main-wrapper .content .main-story .more {
+  background: url(i/imore.png?v20180808) no-repeat center;
+  height: 20px;
+  width: 60px;
+  margin-top: 30px;
+  display: block;
+}
+.main-wrapper .content .main-news {
+  padding: 95px 50px;
+}
+.main-wrapper .content .main-news .txt-area {
+  width: 470px;
+  float: left;
+  border-right: 1px solid #7a7a7a;
+  padding-right: 20px;
+}
+.main-wrapper .content .main-news .txt-area .item {
+  margin-bottom: 30px;
+}
+.main-wrapper .content .main-news .txt-area .item .title {
+  background: url(i/itraggle.png?v20180808) no-repeat left 5px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding-left: 30px;
+}
+.main-wrapper .content .main-news .txt-area .item .sum {
+  font-size: 15px;
+  color: #7a7a7a;
+  line-height: 1.5;
+  text-indent: 30px;
+  margin-top: 15px;
+}
+.main-wrapper .content .main-news .img-area {
+  margin-left: 30px;
+  float: left;
+  width: 600px;
+}
+.main-wrapper .content .main-news .img-area img {
+  width: 100%;
+  height: 450px;
+  margin-bottom: 30px;
+}
+.main-wrapper .content .main-news .img-area .title {
+  font-size: 18px;
+  line-height: 28px;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.main-wrapper .content .main-news .more {
+  background: url(i/imore.png?v20180808) no-repeat center;
+  height: 20px;
+  width: 60px;
+  margin-top: 30px;
+  display: block;
+}
+.main-wrapper .content .list-content {
+  overflow: hidden;
+}
+.main-wrapper .content .list-content .wenzi {
+  padding: 80px 90px;
+}
+.main-wrapper .content .list-content .wenzi ul li {
+  border-bottom: 1px solid #7a7a7a;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+.main-wrapper .content .list-content .wenzi ul li:last-child {
+  border-bottom: none;
+}
+.main-wrapper .content .list-content .wenzi .main-title {
+  background: url(i/itraggle.png?v20180808) no-repeat left 5px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 30px;
+}
+.main-wrapper .content .list-content .wenzi .sum {
+  font-size: 15px;
+  color: #7a7a7a;
+  line-height: 1.5;
+  text-indent: 30px;
+  margin-top: 15px;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.main-wrapper .content .list-content .shipin {
+  padding: 80px;
+}
+.main-wrapper .content .list-content .shipin ul li {
+  margin-bottom: 40px;
+  margin-right: 15px;
+  width: 330px;
+  float: left;
+}
+.main-wrapper .content .list-content .shipin ul li a {
+  display: block;
+}
+.main-wrapper .content .list-content .shipin ul li .img-area {
+  width: 100%;
+  position: relative;
+}
+.main-wrapper .content .list-content .shipin ul li .img-area .news-img {
+  height: 100%;
+  width: 100%;
+}
+.main-wrapper .content .list-content .shipin ul li .img-area .iplay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -26px;
+  margin-top: -26px;
+  z-index: 99;
+}
+.main-wrapper .content .list-content .shipin ul li .main-title {
+  font-size: 16px;
+  padding: 10px;
+  line-height: 1.5;
+  height: 68px;
+}
+.main-wrapper .content .list-content .shipin ul li .main-title p {
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.main-wrapper .content .detail-content {
+  padding: 80px 90px;
+}
+.main-wrapper .content .detail-content .xilan .main-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.main-wrapper .content .detail-content .xilan .from {
+  font-size: 16px;
+  color: #828282;
+  text-align: center;
+}
+.main-wrapper .content .detail-content .xilan .from span {
+  margin-right: 10px;
+}
+.main-wrapper .content .detail-content .xilan .detail-news {
+  margin-top: 30px;
+  line-height: 2;
+  font-size: 16px;
+  height: 500px;
+  overflow-y: scroll;
+}
+.main-wrapper .content .detail-content .xilan .detail-news .video-box {
+  text-align: center;
+  margin: 30px 0 100px ;
+}
+.main-wrapper .content .detail-content .xilan .detail-news .video-box video {
+  width: 900px;
+  height: 507px;
+}
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+/* FlexSlider Necessary Styles
+  *********************************/
+.flexslider .slides > li {
+  display: block;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+}
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {
+  display: block;
+  width: 100%;
+}
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+html[xmlns] .slides {
+  display: block;
+}
+* html .slides {
+  height: 1%;
+}
+/*没有JavaScript回退*/
+/*如果你不使用一个脚本，如Modernizr，确保你包括JS，消除这类页面加载*/
+.no-js .slides > li:first-child {
+  display: block;
+}
+/*去除a两侧图片*/
+.flex-direction-nav {
+  display: none;
+}
+/*FlexSlider默认主题*/
+.flexslider {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  width: 1200px;
+  height: 800px;
+}
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.loading .flex-viewport {
+  max-height: 300px;
+}
+.flexslider .slides {
+  zoom: 1;
+  height: 100%;
+}
+.carousel li {
+  margin-right: 5px;
+}
+/*轮播底部点*/
+.flex-control-nav {
+  text-align: center;
+  margin: 20px auto;
+}
+.flex-control-nav li {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  margin: 0 10px;
+}
+.flex-control-paging li a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  font-size: 0;
+  background: #454545;
+}
+.flex-control-paging li a:hover {
+  background: #e9271e;
+}
+.flex-control-paging li a.flex-active {
+  background: #e9271e;
+}

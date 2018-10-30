@@ -1,0 +1,152 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+.page_head{
+  width: 100%;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+.head_img{
+  width: 100%;
+  min-width: 1000px;
+  margin: 0 auto;
+}
+.page_content{
+  width: 1000px;
+  margin: 0 auto;
+  clear: both;
+  overflow: hidden;
+}
+.page_content .share {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: right;
+  font-size: 13px;
+  line-height: 30px;
+}
+.page_content .share div {
+  display: inline;
+}
+.page_content .share .bdsharebuttonbox {
+  float: right;
+  padding-left: 10px;
+}
+.page_content .title_img{
+  margin: 5px 0px 15px 0px;
+}
+
+.left_content{
+  height:1600px;
+  width: 270px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  float: left;
+}
+.left_list{
+  padding:0px;
+  margin: 0px;
+}
+.left_list li{
+  width: 245px;
+  height:160px;
+  overflow: hidden;
+  list-style: none;
+  margin:0px 0px 25px 0px;
+  padding: 0px;
+  border: #bbbbbb 2px solid;
+}
+.left_list li:hover{
+  border: #e9271e 2px solid;
+}
+.left_list .current{
+  border: #e9271e 2px solid;
+}
+.left_tab_img{
+  width: 245px;
+  height: 160px;
+}
+
+.right_content{
+  width: 730px;
+  float: left;
+}
+.right_list{
+  padding:0px;
+  margin: 0px;
+  overflow: hidden;
+}
+.news-img{
+  width: 160px;
+  height: 120px;
+}
+.iplay {
+  width: 29px;
+  height: 29px;
+  margin-top: 80px;
+  margin-left: 10px;
+  position: absolute;
+  z-index: 99;
+}
+.right_list li{
+  width: 160px;
+  overflow: hidden;
+  list-style: none;
+  margin:0px 0px 25px 22px;
+  padding: 0px;
+  float: left;
+  font-size: 15px;
+  color:#000000;
+  font-weight: bold;
+  line-height: 24px;
+}
+.right_list li a{
+  text-decoration: none;
+  color:#000000 ;
+}
+.right_list li p{
+  height: 50px;
+  margin: 0px 0px 5px 0px;
+  padding: 0px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+.right_list li span{
+  font-size: 13px;
+  color:#a7a7a7;
+  font-weight: normal;
+}
+.right_list li span a{
+  color:#a7a7a7;
+}
+.hide{
+  display: none
+}
+
+.copyright{
+  width:100%;
+  background-color: #eeeeee;
+  border-top: 1px #bbbbbb solid;
+  padding: 0px;
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 24px;
+  margin-top: 75px;
+}
+.copyright p{
+  width: 980px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 10px 0px 10px 20px;
+}
+.copyright a{
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 24px;
+}

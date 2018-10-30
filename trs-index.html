@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title><TRS_CHANNEL ID="" FIELD="CHNLDESC" AUTOLINK="FALSE"/></title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="<TRS_Documents ID="OWNER" CHILDINDEX="0" NUM="1" STARTPOS="1"><TRS_DOCUMENT FIELD="DOCCONTENT"/></TRS_Documents>" />
+    <meta name="description" content="<TRS_Documents ID="OWNER" CHILDINDEX="0" NUM="1" STARTPOS="2"><TRS_DOCUMENT FIELD="DOCCONTENT"/></TRS_Documents>" />
+    <link rel="stylesheet" type="text/css" href="http://www.sctv.com/szzq/website/style/index.css" />
+    <script type="application/javascript" src="http://www.sctv.com/szzq/website/src/jquery.min.js"></script>
+    <script language="JavaScript" src="http://js.sctv.com/Pagination/Pagination.js" ignoreapd="1"></script>
+</head>
+<body>
+<div class="page_head">
+    <TRS_Documents ID="OWNER" CHILDINDEX="0" NUM="1" STARTPOS="3">
+        <img class="head_img" src="<TRS_Appendix index="0" Mode="PIC" FIELD="_RECURL" AUTOLINK="FALSE" UPLOAD="TRUE"/>" />
+    </TRS_Documents>
+</div>
+
+<div class="page_content">
+    <!--share s-->
+    <div class="share clear">
+        <div class="left">&nbsp;&nbsp;&nbsp;&nbsp;分享到:</div>
+        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a></div>
+    </div>
+    <!--share e-->
+    <div class="left_content" id="j_menu">
+        <ul class="left_list">
+            <TRS_Documents ID="OWNER" CHILDINDEX="1" STARTPOS="0">
+                <li><a href="<TRS_Appendix index="0" Mode="LINK" FIELD="_RECURL" AUTOLINK="FALSE" UPLOAD="TRUE"/>"><img class="left_tab_img" src="<TRS_Appendix index="0" Mode="PIC" FIELD="_RECURL" AUTOLINK="FALSE" UPLOAD="TRUE"/>" /></a></li>
+            </TRS_Documents>
+        </ul>
+    </div>
+
+    <div  class="right" id="j_content">
+        <div class="right_content">
+            <ul class="right_list">
+                <TRS_Documents ID="OWNER" CHILDINDEX="2" STARTPOS="0"  PAGESIZE="76">
+                    <li>
+                        <a href="<TRS_DOCUMENT FIELD="_RECURL"/>" TARGET="_blank">
+                        <img class="iplay" src="http://www.sctv.com/szzq/website/style/play_btn.png" />
+                        <img class="news-img" src="<TRS_Appendix index="0" Mode="PIC" FIELD="_RECURL" AUTOLINK="FALSE" UPLOAD="TRUE"/>" />
+                        </a>
+                        <p><TRS_DOCUMENT FIELD="DOCTITLE" /></p>
+                    </li>
+                </TRS_Documents>
+            </ul>
+
+            <!--分页 s-->
+            <div class="list-page">
+                <script>
+                    var wWidth = $('body').width();
+
+                    if(wWidth > 750){
+                        Pagination(
+                            ${PAGE_INDEX},${PAGE_COUNT}, //当前页码，总页码
+                            "index","shtml", //页面名称前缀，页面名称后缀(栏目分页可以不填)
+                            "","5", //分页名,显示页码数量
+                            "","14px","5px 10px","", //字体样式，字体大小，内间隙，外间隙
+                            "#D8D8D8","","","","#D8D8D8", //无连接的样式（字体颜色、背景色、边框大小、边框样式、边框颜色）
+                            "#ffffff","#fa1800 ","","","#D8D8D8", //当前页码样式（字体颜色、背景色、边框大小、边框样式、边框颜色）
+                            "#828282","","","","#828282", //连接页码样式（字体颜色、背景色、边框大小、边框样式、边框颜色）
+                            "#FFF","#fa1800 ","","","#D8D8D8" //悬停页码样式（字体颜色、背景色、边框大小、边框样式、边框颜色）
+                        )
+                    }else {
+                        Pagination(
+                            ${PAGE_INDEX},${PAGE_COUNT}, //当前页码，总页码
+                            "index","shtml", //页面名称前缀，页面名称后缀(栏目分页可以不填)
+                            "","5", //分页名,显示页码数量
+                            "","0.4rem","0 2px","", //字体样式，字体大小，内间隙，外间隙
+                            "#D8D8D8","","","","#D8D8D8", //无连接的样式（字体颜色、背景色、边框大小、边框样式、边框颜色）
+                            "#ffffff","#fa1800 ","","","#D8D8D8", //当前页码样式（字体颜色、背景色、边框大小、边框样式、边框颜色）
+                            "#828282","","","","#828282", //连接页码样式（字体颜色、背景色、边框大小、边框样式、边框颜色）
+                            "#FFF","#fa1800 ","","","#D8D8D8" //悬停页码样式（字体颜色、背景色、边框大小、边框样式、边框颜色）
+                        )
+                    }
+
+                </script>
+            </div>
+            <!--分页 e-->
+        </div>
+    </div>
+</div>
+
+<div class="copyright container">
+    <p>&copy;2001-2018 四川广播电视台 版权所有 不得转载
+        <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank">蜀ICP备10038523&nbsp;&nbsp;&nbsp;</a><br/>
+        <a href="http://www.sctv.com/ICP/MOVIE.HTML" target="_blank">网上传播视听节目许可证号：2304070&nbsp;&nbsp;&nbsp;</a>
+        <a href="http://www.sctv.com/ICP/NEWS.HTML" target="_blank">新闻信息服务资质备案号：川新备06-000025</a>&nbsp;&nbsp;&nbsp;
+        <a href="http://www.sctv.com/ICP/safe.HTML" target="_blank">信息系统安全等级保护备案号：510112990153</a>&nbsp;&nbsp;&nbsp;
+        川预审NFP4-NP24-8Z2B-4FJ8号
+    </p>
+</div>
+
+</body>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>
+    //初始化显示与左边高度
+    var _heightRightstart=$('.right_content').eq(0).height();
+    var $leftContent = $('.left_content');
+    if(_heightRightstart>1600){$leftContent.height(_heightRightstart);}
+    else{$leftContent.height(1600);}
+
+    //初始化左边栏样式
+
+    $('#j_menu').find('li').eq(0).addClass('current');
+
+    $('#j_menu').find('a').each(function () {
+        if ($(this).prop('href')=='http://www.sctv.com/szzq/lz/'){
+            $(this).attr('TARGET','_blank');
+        }
+    });
+
+</script>
+</html>
